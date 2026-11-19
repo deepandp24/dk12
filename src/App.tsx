@@ -28,9 +28,11 @@ import MiddleEast from './pages/regions/MiddleEast';
 import Australia from './pages/regions/Australia';
 
 function App() {
+  const basename = import.meta.env.BASE_URL?.replace(/\/$/, '') || '/';
+
   return (
     <HelmetProvider>
-      <Router basename={import.meta.env.BASE_URL}>
+      <Router basename={basename}>
         <Layout>
           <Routes>
             <Route path="/" element={<Home />} />
