@@ -1,0 +1,59 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --color-navy-900: #0A0A0A;
+  --color-navy-800: #171717;
+  --color-navy-700: #262626;
+  --color-accent-400: #FF8F1C;
+  --color-accent-500: #FF6A00;
+  --color-accent-600: #FD4A00;
+  --color-accent-700: #D83D00;
+  --color-brand-orange: #FF6A00;
+  --color-brand-dark-orange: #FD4A00;
+  --color-brand-charcoal: #0A0A0A;
+  --font-sans: 'Montserrat', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Montserrat', system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    @apply text-neutral-900 bg-white;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    @apply tracking-tight;
+  }
+
+  /* Override btn primary globally for DG Technix brand look */
+  .btn {
+    @apply inline-flex items-center justify-center font-semibold transition-all px-6 py-3 border border-transparent;
+  }
+  
+  .btn-primary {
+    background: linear-gradient(135deg, #FF8F1C 0%, #FD4A00 100%);
+    @apply text-white hover:opacity-95 focus:ring-2 focus:ring-offset-2 focus:ring-[#FF6A00] rounded-sm shadow-sm hover:shadow-md;
+  }
+}
+
+.gradient-orange {
+  background: linear-gradient(135deg, #FF8F1C 0%, #FD4A00 100%);
+}
+
+.text-gradient-orange {
+  background: linear-gradient(135deg, #FF8F1C 0%, #FD4A00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@layer utilities {
+  .animate-marquee {
+    animation: marquee 25s linear infinite;
+  }
+  @keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-100%); }
+  }
+}
