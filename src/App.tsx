@@ -1,3 +1,4 @@
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import Layout from './components/layout/Layout';
@@ -28,7 +29,9 @@ import MiddleEast from './pages/regions/MiddleEast';
 import Australia from './pages/regions/Australia';
 
 function App() {
-  const basename = import.meta.env.BASE_URL?.replace(/\/$/, '') || '/';
+  const basename = typeof window !== 'undefined' && window.location.pathname.startsWith('/dk12')
+    ? '/dk12'
+    : (typeof import.meta !== 'undefined' && import.meta?.env?.BASE_URL?.replace(/\/$/, '') || '/');
 
   return (
     <HelmetProvider>

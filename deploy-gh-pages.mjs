@@ -5,10 +5,12 @@ import fs from 'node:fs';
 const dist = path.resolve('dist');
 const env = { 
   ...process.env, 
-  PATH: 'C:\\Users\\deepa\\.gemini\\antigravity\\mingit\\cmd;C:\\Users\\deepa\\.gemini\\antigravity\\mingit\\ucrt64\\bin;' + process.env.PATH 
+  BASE_PATH: '/dk12/',
+  NETLIFY: 'false',
+  PATH: 'C:\\Users\\deepa\\.gemini\\antigravity\\mingit\\cmd;C:\\Users\\deepa\\.gemini\\antigravity\\mingit\\ucrt64\\bin;' + (process.env.PATH || '')
 };
 
-console.log('Ensuring dist is fresh...');
+console.log('Ensuring dist is fresh for GitHub Pages...');
 execSync('npm run build', { env, stdio: 'inherit' });
 
 console.log('Deploying dist directly to origin/gh-pages...');
