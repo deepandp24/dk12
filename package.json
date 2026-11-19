@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "node generate-sitemap.js && tsc -b && vite build",
+    "deploy": "npm run build && git add . && git commit -m \"Deploy site update\" && git push origin main",
     "lint": "oxlint src",
     "preview": "vite preview"
   },

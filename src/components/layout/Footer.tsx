@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Globe, ArrowRight, Mail, MessageSquare } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { asset } from '../../lib/asset';
 
 const Footer = () => {
   const { i18n } = useTranslation();
@@ -18,7 +19,7 @@ const Footer = () => {
           {/* Brand & Global Info */}
           <div className="lg:col-span-2">
             <Link to="/" className="inline-block mb-6">
-              <img src="/logo-color-on-dark.svg" alt="DG Technix" className="h-10 md:h-12 w-auto" />
+              <img src={asset('/logo-color-on-dark.svg')} alt="DG Technix" className="h-10 md:h-12 w-auto" />
             </Link>
             <p className="text-accent-400 mb-2 font-bold tracking-wider uppercase text-xs">Digital • Marketing • Technology</p>
             <p className="text-gray-400 mb-6 max-w-sm text-sm leading-relaxed">

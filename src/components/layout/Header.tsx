@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Menu, X, ChevronDown, Search, Globe, Shield, Cpu, Users } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import SearchModal from './SearchModal';
+import { asset } from '../../lib/asset';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -28,7 +29,7 @@ const Header = () => {
       <header className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-sm py-3 border-b border-gray-100' : 'bg-white/90 backdrop-blur-md py-4 border-b border-gray-100/60'}`}>
         <div className="container mx-auto px-4 md:px-6 lg:px-8 flex justify-between items-center">
           <Link to="/" className="flex items-center gap-2 group">
-            <img src="/logo.svg" alt="DG Technix" className="h-8 md:h-9 w-auto" />
+            <img src={asset('/logo.svg')} alt="DG Technix" className="h-8 md:h-9 w-auto" />
           </Link>
           
           {/* Desktop Nav */}

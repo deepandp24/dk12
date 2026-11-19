@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Globe, Users, Target, Shield, ArrowRight, Code, CheckCircle2, FileText } from 'lucide-react';
 import FadeIn from '../components/ui/FadeIn';
+import { asset } from '../lib/asset';
 
 const About = () => {
   return (
@@ -20,7 +21,7 @@ const About = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-[#0A0A0A] via-[#121212] to-[#0A0A0A] opacity-95 pointer-events-none" />
         <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/4 w-[450px] h-[450px] bg-gradient-to-br from-[#FF8F1C]/15 to-[#FD4A00]/5 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute -right-12 -bottom-12 opacity-5 pointer-events-none select-none">
-          <img src="/icon-white.svg" alt="" className="w-80 md:w-96 h-auto" />
+          <img src={asset('/icon-white.svg')} alt="" className="w-80 md:w-96 h-auto" />
         </div>
         <div className="container mx-auto px-4 relative z-10 max-w-4xl text-center">
           <FadeIn>

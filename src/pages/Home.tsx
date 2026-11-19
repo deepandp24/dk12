@@ -26,6 +26,7 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import FadeIn from '../components/ui/FadeIn';
+import { asset } from '../lib/asset';
 
 const Home = () => {
   return (
@@ -46,7 +47,7 @@ const Home = () => {
         {/* Soft branded background glow and oversized G mark per Brand Guidelines */}
         <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/4 w-[450px] h-[450px] md:w-[650px] md:h-[650px] bg-gradient-to-br from-[#FF8F1C]/15 to-[#FD4A00]/5 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute -right-16 -bottom-16 opacity-5 pointer-events-none select-none">
-          <img src="/icon-white.svg" alt="" className="w-96 md:w-[480px] h-auto" />
+          <img src={asset('/icon-white.svg')} alt="" className="w-96 md:w-[480px] h-auto" />
         </div>
         <div className="container mx-auto px-4 max-w-6xl relative z-10">
           <div className="max-w-4xl">
@@ -155,7 +156,7 @@ const Home = () => {
               <div className="bg-white rounded-sm border border-gray-200 hover:border-accent-500 transition-all flex flex-col h-full shadow-sm hover:shadow-md">
                 <div className="relative aspect-[16/10] bg-gray-100 border-b border-gray-200 overflow-hidden group">
                   <img 
-                    src="/portfolio/Purple_Squad.png" 
+                    src={asset('/portfolio/Purple_Squad.png')} 
                     alt="Purple Squad Platform Experience" 
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
@@ -221,7 +222,7 @@ const Home = () => {
               <div className="bg-white rounded-sm border border-gray-200 hover:border-accent-500 transition-all flex flex-col h-full shadow-sm hover:shadow-md">
                 <div className="relative aspect-[16/10] bg-gray-100 border-b border-gray-200 overflow-hidden group">
                   <img 
-                    src="/portfolio/Organivaa.png" 
+                    src={asset('/portfolio/Organivaa.png')} 
                     alt="Organivaa Natural Wellness Storefront" 
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
@@ -374,7 +375,7 @@ const Home = () => {
               <div>
                 <div className="relative aspect-[16/10] bg-gray-100 border-b border-gray-200 overflow-hidden">
                   <img 
-                    src="/portfolio/LinkSync.png" 
+                    src={asset('/portfolio/LinkSync.png')} 
                     alt="LinkSync - Bio-Link & Creator Hub" 
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
@@ -425,7 +426,7 @@ const Home = () => {
               <div>
                 <div className="relative aspect-[16/10] bg-gray-100 border-b border-gray-200 overflow-hidden">
                   <img 
-                    src="/portfolio/BillNow_DG Bill.png" 
+                    src={asset('/portfolio/BillNow_DG Bill.png')} 
                     alt="BillNow / DG Bill - Billing & Inventory Software" 
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
@@ -493,7 +494,7 @@ const Home = () => {
               <div>
                 <div className="relative aspect-[16/10] bg-gray-100 border-b border-gray-200 overflow-hidden">
                   <img 
-                    src="/portfolio/Zylinn_AI.png" 
+                    src={asset('/portfolio/Zylinn_AI.png')} 
                     alt="Zylinn AI - Multilingual AI Voice Agents" 
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
@@ -833,7 +834,7 @@ const Home = () => {
                 className="flex items-center justify-center p-4 bg-white border border-gray-200 rounded-sm hover:border-accent-500 transition-colors shadow-xs"
                 title="Purple Squad"
               >
-                <img src="/purplesquad.png" alt="Purple Squad" className="h-9 md:h-10 w-auto object-contain" />
+                <img src={asset('/purplesquad.png')} alt="Purple Squad" className="h-9 md:h-10 w-auto object-contain" />
               </a>
 
               <a 
@@ -852,7 +853,7 @@ const Home = () => {
                 className="flex items-center justify-center p-4 bg-white border border-gray-200 rounded-sm hover:border-accent-500 transition-colors shadow-xs"
                 title="GAD Growths"
               >
-                <img src="/gadgrowths.png" alt="GAD Growths" className="h-9 md:h-10 w-auto object-contain" />
+                <img src={asset('/gadgrowths.png')} alt="GAD Growths" className="h-9 md:h-10 w-auto object-contain" />
               </div>
 
               <a 
